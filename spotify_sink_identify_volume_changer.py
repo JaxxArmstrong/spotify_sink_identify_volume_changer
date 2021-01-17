@@ -37,7 +37,7 @@ if app in pactl:
     sink_id = sink_id[1: ]
     volume = volume[ : -1 ]
 
-    if volchange == "up":
+    if volchange == "up" or volchange == "UP":
         subprocess.run(['pactl', 'set-sink-input-volume', sink_id, '+1%'])
     else:
         subprocess.run(['pactl', 'set-sink-input-volume', sink_id, '-1%'])
